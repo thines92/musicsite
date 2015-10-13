@@ -15,8 +15,7 @@ $("form input[name='clickButton']").click(function() {
   searchForSong();
 });
 
-$("form input[name='extBox']").keyup(function(event){
-    if(event.keyCode == 13){
-        $("form input[name='clickButton']").click();
-    }
+$("form").on('submit', function(e){
+    e.preventDefault();
+    searchForSong();
 });
